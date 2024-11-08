@@ -1,0 +1,221 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap');
+
+body {
+  background: linear-gradient(135deg, #0f2027, #203a43, #2c5364);
+  font-family: 'Poppins', sans-serif;
+  margin: 0;
+  padding: 0;
+}
+
+h1 {
+  text-align: center;
+  color: black;
+  margin-bottom: 20px;
+}
+
+.container {
+  background-color: white;
+  width: 90%;
+  max-width: 600px;
+  margin: 40px auto;
+  padding: 20px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  border-radius: 15px;
+}
+
+span {
+  font-weight: 600;
+  font-size: 16px;
+}
+
+/* Button Styling */
+button {
+  font-size: 16px;
+  padding: 8px;
+  border-radius: 5px;
+  cursor: pointer;
+  border: none;
+  transition: all 0.3s ease;
+}
+
+button.edit, button.delete, button.complete-btn, button.btn-panding {
+  background-color: aliceblue;
+  color: #081b29;
+  font-size: 18px;
+  margin: 5px;
+}
+
+button.edit:hover, button.delete:hover, button.complete-btn:hover, button.btn-panding:hover {
+  color: blue;
+  transform: scale(1.1);
+}
+
+button.complete-btn {
+  background-color: green;
+  color: white;
+}
+
+button.Cancel {
+  background-color: blue;
+  color: white;
+  font-size: 19px;
+  padding: 8px;
+  font-weight: 600;
+  width: 113px;
+  margin: 10px;
+}
+
+/* Flex container for task buttons */
+.button-group {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+}
+
+/* Task item styling */
+.card-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.card-container input[type="text"] {
+  width: 100%;
+  max-width: 400px;
+  height: 50px;
+  background-color: lightgray;
+  color: black;
+  font-size: 18px;
+  border-radius: 25px;
+  padding-left: 15px;
+  border: none;
+  margin-bottom: 20px;
+  outline: none;
+}
+
+/* Add button styling */
+.btn-add {
+  background-color: blue;
+  color: white;
+  font-size: 18px;
+  font-weight: 600;
+  border-radius: 8px;
+  padding: 12px 20px;
+  border: none;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  margin-bottom: 20px;
+}
+
+.btn-add:hover {
+  background-color: #0056b3;
+  transform: translateY(-3px);
+}
+
+/* Task item container */
+.task-item {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  background-color: white;
+  padding: 10px;
+  margin: 10px 0;
+  width: 100%;
+  border-radius: 8px;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+/* Task description */
+.task-item span {
+  font-size: 18px;
+  font-weight: 600;
+  flex-grow: 1;
+  word-break: break-word;
+}
+
+/* Additional styles for task completion */
+.completed {
+  text-decoration: line-through;
+  color: green;
+}
+.span-pending{
+  color: red;
+}
+/* Responsive styling for tablets */
+@media (max-width: 768px) {
+  .container {
+    padding: 15px;
+  }
+
+  .btn-add {
+    width: 100%;
+    font-size: 16px;
+    padding: 10px;
+  }
+
+  .task-item {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .task-item span {
+    font-size: 16px;
+  }
+
+  .task-item button {
+    font-size: 14px;
+  }
+
+  button.update, button.cancel {
+    width: 45%;
+    font-size: 14px;
+  }
+}
+
+/* Responsive styling for mobile devices */
+@media (max-width: 480px) {
+  h1 {
+    font-size: 20px;
+    margin-bottom: 10px;
+  }
+
+  .container {
+    padding: 10px;
+    box-shadow: none;
+  }
+
+  .card-container input[type="text"] {
+    width: 100%;
+    height: 40px;
+    font-size: 16px;
+  }
+
+  .btn-add {
+    width: 100%;
+    height: 40px;
+    font-size: 16px;
+  }
+
+  .task-item {
+    padding: 8px;
+  }
+
+  .task-item span {
+    font-size: 16px;
+  }
+
+  .button-group {
+    flex-direction: column;
+    width: 100%;
+  }
+
+  .task-item button {
+    font-size: 14px;
+    padding: 5px;
+  }
+
+  button.update, button.cancel {
+    width: 100%;
+    font-size: 14px;
+  }
+}
